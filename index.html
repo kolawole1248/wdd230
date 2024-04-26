@@ -2,19 +2,78 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kolawole Uthman Abisola - WDD 230 - Web Frontend Development</title>
+    <meta name="description"
+        content="Kolawole Uthman Abisola - WDD 230 - Web Frontend Development - Home page development">
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/larger.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Big+Shoulders+Display:wght@300&family=Courgette&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Libre+Franklin:ital,wght@1,300&family=Mooli&family=Permanent+Marker&family=Playfair+Display&family=Quintessential&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <h1>Welcome to WDD230 Web Projects</h1>
+    <header>
+        <a id="logo_link" href="index.html"></a>
+        <img class="img" src="images/imagess.png" alt="My image" width="50" height="65">
+        <h1 class="c">Kolawole Uthman Abisola</h1>
+    </header>
     <nav>
-        <a href="week01/holygrail.html">holygrail</a>
-
-        <a href="week01/media-query.html">media query</a>
-
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">SitePlan</a></li>
+            <li><a href="#">Form</a></li>
+        </ul>
     </nav>
+    <h1 class="line">WDD 230: Frontend Development</h1>
+    <main class="home-grid">
+        <section>
+            <span>Learning Activities</span>
+            <ul>
+                <li><a href="#">week01</a></li>
+                <li><a href="#">week02</a></li>
+                <li><a href="#">week03</a></li>
+                <li><a href="#">week04</a></li>
+                <li><a href="#">week05</a></li>
+                <li><a href="#">week06</a></li>
+            </ul>
+
+        </section>
+        <section>
+            <span>Information</span>
+            <p>Weather: [Placeholder]</p>
+            <p>Number of visits to the page: [Placeholder]</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<span id="year"></span> - Kolawole Uthman Abisola - Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+
+
+    <script>
+
+        const yearSpan = document.getElementById("year");
+        const currentYear = new Date().getFullYear();
+        yearSpan.textContent = currentYear;
+
+
+        const lastModifiedParagraph = document.getElementById("lastModified");
+        lastModifiedParagraph.textContent = "Last modified: " + document.lastModified;
+
+
+
+
+    </script>
+
+
+
+
 </body>
 
 </html>
