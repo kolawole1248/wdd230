@@ -14,6 +14,7 @@
     <meta property="og:url" content="index.html">
     <link rel="stylesheet" href="style/base.css">
     <link rel="stylesheet" href="style/larger.css">
+    <link rel="stylesheet" href="style/bu.css">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,13 +29,12 @@
         <img class="img" src="images/imagess.png" alt="My image" width="50" height="65">
         <h1 class="c">Kolawole Uthman Abisola</h1>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">Chamber</a></li>
-            <li><a href="#">SitePlan</a></li>
-            <li><a href="#">Form</a></li>
-        </ul>
+    <button id="menu"></button>
+    <nav class="navigation">
+        <a href="#" title="Home">Home</a>
+        <a href="#" title="Chamber" class="active">Chamber</a>
+        <a href="#" title="SitePlan">SitePlan</a>
+        <a href="#" title="Form">Form</a>
     </nav>
     <h1 class="line">WDD 230: Frontend Development</h1>
     <main class="home-grid">
@@ -65,8 +65,8 @@
     </footer>
 
 
-    <script>
 
+    <script>
         const yearSpan = document.getElementById("year");
         const currentYear = new Date().getFullYear();
         yearSpan.textContent = currentYear;
@@ -76,7 +76,21 @@
         lastModifiedParagraph.textContent = "Last modified: " + document.lastModified;
 
 
+
+        const hamButton = document.querySelector('#menu');
+        const navigation = document.querySelector('.navigation');
+
+        hamButton.addEventListener('click', () => {
+            navigation.classList.toggle('open');
+            hamButton.classList.toggle('open');
+        });
+
+
+
+
     </script>
+
+
 
 
 

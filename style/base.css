@@ -27,6 +27,7 @@ h1 {
     font-size: 2rem;
 }
 
+
 nav {
     background-color: #36454f;
 
@@ -92,24 +93,4 @@ footer {
     margin-top: 20px;
     padding: 20px;
 
-}
-
-
-
-
-
-
-
-
-
-
-/* Larger Views ******************************/
-@media (min-width: 640px) {
-    nav ul {
-        display: flex;
-    }
-
-    nav ul li {
-        flex: 1 1 100%;
-    }
 }
