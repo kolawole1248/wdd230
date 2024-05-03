@@ -1,0 +1,35 @@
+header {
+    padding: 30px;
+    background-color: #34312D;
+    text-align: center;
+    color: white
+}
+
+.colors th {
+    background-color: #D9C5B2;
+}
+
+.colors td {
+    width: 25%;
+    height: 3em;
+}
+
+.primary {
+    background-color: #14110F;
+}
+
+.secondary {
+    background-color: #34312D;
+}
+
+.accent1 {
+    background-color: #7E7F83;
+}
+
+.accent2 {
+    background-color: #D9C5B2;
+}
+
+.accent3 {
+    background-color: #F3F3F4;
+}
