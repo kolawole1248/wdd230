@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Load Demonstration</title>
+    <link rel="stylesheet" href="style/lazy.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Lazy Load Demonstration</h1>
+
+    </header>
+    <main>
+        <picture>
+            <img src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg"
+                alt="lizard image" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFjRusOLck2V6EDcbAcw3qgtJwk11l3GgPZLuwde6YOA&s"
+                alt="lizard image" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <img src="https://images.unsplash.com/photo-1580552833700-f99eed8b4de2?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d29tYW4lMjBjYW1lcmF8ZW58MHx8MHx8fDA%3D"
+                alt="lizard image" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5LckgPhp4DRsm7e2YpnCCbsYDwtxIT9zF3WcWfi0NXTQRE2BJa53uvceTMwZzr4AufH8&usqp=CAU"
+                alt="lizard image" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <img src="https://rukminim2.flixcart.com/image/850/1000/kxgfzbk0/wall-decoration/r/w/n/peacock-feathers-wallpaper-paper-poster-1-vp-221221-1199-poster-original-imag9wjq7ppasmqe.jpeg?q=20"
+                alt="lizard image" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <img src="https://media.istockphoto.com/id/1288831028/photo/osun-osogbo-sacred-grove.jpg?s=612x612&w=0&k=20&c=0XZ5WWmpqNyaI2pD64ftUvkh4Nb7mf-Ku1jLkgMu5lw="
+                alt="lizard image" loading="lazy" width="400" height="600">
+        </picture>
+
+
+    </main>
+    <footer>
+        <p>&copy;<span id="year"></span> - Kolawole Uthman Abisola - Nigeria</p>
+        <p id="lastModified"></p>
+
+    </footer>
+    <script>
+        const yearSpan = document.getElementById("year");
+        const currentYear = new Date().getFullYear();
+        yearSpan.textContent = currentYear;
+
+
+        const lastModifiedParagraph = document.getElementById("lastModified");
+        lastModifiedParagraph.textContent = "Last modified: " + document.lastModified;
+    </script>
+</body>
+
+</html>
