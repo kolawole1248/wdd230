@@ -129,3 +129,23 @@ nav {
         margin: 1rem auto;
     }
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+main {
+    max-width: 670px;
+    margin: 0 auto;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero span {
+    position: absolute;
+}

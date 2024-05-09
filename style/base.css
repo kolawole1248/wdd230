@@ -213,3 +213,43 @@ nav {
         margin: 1rem auto;
     }
 }
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero span {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background: radial-gradient(#fff, #4D5B97);
+    border: 1px solid rgba(0, 0, 0, .75);
+    padding: 1.5rem;
+    box-shadow: 0 0 3rem #fff;
+    opacity: 0.75;
+    /* Buenas */
+}
+
+.hero span p {
+    margin: 0;
+    padding: .25rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: "Great Vibes", serif;
+}
+
+.label {
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+}
+
+#visits {
+    color: navy;
+    font-weight: bolder;
+    font-size: larger;
+}

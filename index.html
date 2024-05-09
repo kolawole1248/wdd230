@@ -29,7 +29,7 @@
 <body>
     <header>
         <a id="logo_link" href="index.html"></a>
-        <img class="img" src="images/imagess.png" alt="My image" width="50" height="65">
+        <img class="img" src="images/imagess.webp" alt="My image" width="50" height="65">
         <h1 class="c">Kolawole Uthman Abisola</h1>
     </header>
     <button id="menu"></button>
@@ -39,6 +39,15 @@
         <a href="#" title="SitePlan">SitePlan</a>
         <a href="#" title="Form">Form</a>
     </nav>
+    <div class="hero">
+        <picture>
+            <source srcset="images/hero-small.webp" media="(max-width: 500px)">
+            <source srcset="images/hero-medium.webp" media="(max-width: 1000px)">
+            <img src="images/hero-large.webp" alt="table setting" width="1500" height="750">
+            <span>The Temple Area</span>
+        </picture>
+    </div>
+    </div>
     <h1 class="line">WDD 230: Frontend Development</h1>
     <main class="home-grid">
         <section>
@@ -59,8 +68,12 @@
         <section>
             <span>Information</span>
             <p>Weather: [Placeholder]</p>
-            <p>Number of visits to the page: [Placeholder]</p>
+            <p><span class="label">Number of Visits: </span><span class="visits"></span></p>
         </section>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8069790.435797271!2d8.677456999999999!3d9.0338725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1715215914781!5m2!1sen!2sng"
+            width="1000" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
     </main>
     <footer>
         <p>&copy;<span id="year"></span> - Kolawole Uthman Abisola - Nigeria</p>
@@ -103,9 +116,32 @@
         });
 
 
+        const visitsDisplay = document.querySelector(".visits");
+
+
+        let numVisits = Number(window.localStorage.getItem("numVisits-ls")) || 0;
+
+
+        if (numVisits !== 0) {
+            visitsDisplay.textContent = numVisits;
+        } else {
+            visitsDisplay.textContent = `This is your first visit. 🥳 Welcome!`;
+        }
+
+
+        numVisits++;
+
+
+        localStorage.setItem("numVisits-ls", numVisits);
+
+
+
+
+
 
 
     </script>
+
 
 
 
