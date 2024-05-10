@@ -68,3 +68,20 @@ main {
     font-size: 1.5rem;
     font-family: "Great Vibes", serif;
 }
+
+@media (min-width: 768px) {
+
+    body {
+        font-size: 18px;
+    }
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+}
+
+.hero {
+    text-align: center;
+}

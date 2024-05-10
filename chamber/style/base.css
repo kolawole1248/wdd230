@@ -86,7 +86,7 @@ nav {
 }
 
 .active::before {
-    content: "📍";
+    content: "";
     /* just a wayfinding symbol for the user */
 }
 
@@ -130,22 +130,53 @@ nav {
     }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-
-main {
-    max-width: 670px;
-    margin: 0 auto;
-}
-
-.hero img {
-    width: 100%;
-    height: auto;
-}
-
-.hero {
+#hero {
     position: relative;
+    height: 85vh;
+
 }
 
-.hero span {
+/* Style for the hero content */
+.hero-content {
     position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+/* Style for the call to action button */
+.cta-btn {
+    background-color: #333;
+    ;
+    /* Green background */
+    border: none;
+    /* Remove border */
+    color: white;
+    /* White text color */
+    padding: 15px 32px;
+    /* Padding */
+    font-size: 16px;
+    /* Font size */
+    cursor: pointer;
+    /* Add cursor on hover */
+    border-radius: 5px;
+    /* Rounded corners */
+    transition: background-color 0.3s;
+    /* Smooth color transition on hover */
+}
+
+/* Hover effect */
+.cta-btn:hover {
+    background-color: #D9C5B2;
+    /* Darker green */
+}
+
+footer {
+    background-color: #D9C5B2;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+
 }
