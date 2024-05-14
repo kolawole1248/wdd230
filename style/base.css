@@ -175,7 +175,6 @@ nav {
 }
 
 .stuff {
-    margin: 0.5m;
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: #bed;
     max-width: 580px;
@@ -223,7 +222,7 @@ nav {
     position: relative;
 }
 
-.hero span {
+.hero sp {
     position: absolute;
     top: 30px;
     left: 30px;
@@ -235,7 +234,7 @@ nav {
     /* Buenas */
 }
 
-.hero span p {
+.hero sp p {
     margin: 0;
     padding: .25rem;
     font-weight: 700;
