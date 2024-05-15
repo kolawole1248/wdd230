@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page</title>
+    <link rel="stylesheet" href="style/form.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Header</h1>
+    </header>
+    <nav>
+        <ul class="navigation">
+            <li><a href="#" title="Home">Home</a></li>
+            <li><a href="#" title="About" class="active">About</a></li>
+            <li><a href="#" title="News">News</a></li>
+            <li><a href="#" title="Form">Events</a></li>
+            <li><a href="$" title="Membership">Membership</a></li>
+            <li><a href="$" title="Membership">Advocacy</a></li>
+            <li><a href="$" title="Join">Join</a></li>
+            <li><a href="$" title="Contact Us">Contact Us</a></li>
+        </ul>
+    </nav>
+    <main>
+        <form action="record.html" method="get">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" pattern="[A-Za-z0-9]{8,}" required><br>
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" required
+                title="Please enter a valid email address"><br>
+
+            <label for="pageRating">Page Rating:</label>
+            <input type="range" id="pageRating" name="pageRating" min="1" max="10" step="1"><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
