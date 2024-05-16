@@ -98,6 +98,150 @@ nav {
     height: 100vh;
 }
 
+.weather-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.weather-header h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.weather-header p {
+    margin: 4px 0 8px;
+    color: #777;
+}
+
+.weather-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 16px;
+}
+
+.weather-details p {
+    margin: 4px 0;
+    color: #555;
+}
+
+.spotlight {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px 0;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.spotlight-img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    border-radius: 8px;
+}
+
+.spotlight h3 {
+    margin: 16px 0 8px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.spotlight p {
+    color: #555;
+}
+
+.spotlight a {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 8px 16px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    color: #007bff;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.spotlight a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* General Styles for Events and Spotlights */
+.event,
+.spotlight {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.event h3,
+.spotlight h3 {
+    margin: 16px 0 8px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.event p,
+.spotlight p {
+    color: #555;
+}
+
+.event a,
+.spotlight a {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 8px 16px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    color: #007bff;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.event a:hover,
+.spotlight a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Specific Styles for Spotlights */
+.spotlight-img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    border-radius: 8px;
+}
+
+/* Media Query for Responsive Design */
+@media (min-width: 768px) {
+    .spotlight {
+        display: inline-block;
+        width: calc(33.333% - 32px);
+        vertical-align: top;
+        margin: 16px;
+    }
+
+    .spotlight img {
+        max-width: 100%;
+    }
+}
+
+
 /* large view navigation ************************************/
 @media (min-width: 37.5em) {
     h1 {
