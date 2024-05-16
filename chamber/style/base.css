@@ -91,7 +91,7 @@ nav {
 }
 
 .stuff {
-    margin: 0.5m;
+
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: #bed;
     max-width: 580px;
@@ -239,6 +239,11 @@ nav {
     .spotlight img {
         max-width: 100%;
     }
+}
+
+.social {
+    height: 50px;
+    width: 50px;
 }
 
 
