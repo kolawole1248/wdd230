@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Chamber of Commerce</title>
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/larger.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Chamber of Commerce</h1>
+    </header>
+    <nav>
+        <ul class="navigation">
+            <li><a href="#" title="Home">Home</a></li>
+            <li><a href="#" title="About" class="active">About</a></li>
+            <li><a href="#" title="News">News</a></li>
+            <li><a href="#" title="Form">Events</a></li>
+            <li><a href="$" title="Membership">Membership</a></li>
+            <li><a href="join.html" title="Membership">Join</a></li>
+            <li><a href="discover.html" title="Discover" class="active">Discover</a></li>
+            <li><a href="$" title="Contact Us">Contact Us</a></li>
+
+        </ul>
+    </nav>
+    <main>
+        <section class="form-section">
+            <form id="membershipForm" action="thankyou.html" method="get">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required><br>
+
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required><br>
+
+                <label for="title">Title/Position:</label>
+                <input type="text" id="title" name="title" pattern="[A-Za-z\s-]{7,}" required><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@domain.com" required><br>
+
+                <label for="phone">Mobile Phone:</label>
+                <input type="tel" id="phone" name="phone" required><br>
+
+                <label for="organization">Organization Name:</label>
+                <input type="text" id="organization" name="organization" required><br>
+
+                <label for="membershipLevel">Membership Level:</label>
+                <select id="membershipLevel" name="membershipLevel" required>
+                    <option value="np">NP Membership</option>
+                    <option value="bronze">Bronze Membership</option>
+                    <option value="silver">Silver Membership</option>
+                    <option value="gold">Gold Membership</option>
+                </select><br>
+
+                <label for="description">Organization Description:</label>
+                <textarea id="description" name="description"></textarea><br>
+
+                <input type="hidden" id="timestamp" name="timestamp" value=""><br>
+
+                <input type="submit" value="Submit">
+            </form>
+            <aside class="membership-benefits">
+                <h2>Membership Benefits</h2>
+                <p><strong>NP Membership:</strong> No fee, basic access to events.</p>
+                <p><strong>Bronze Membership:</strong> Access to events, training sessions.</p>
+                <p><strong>Silver Membership:</strong> All Bronze benefits, plus advertising opportunities.</p>
+                <p><strong>Gold Membership:</strong> All Silver benefits, plus spotlight positions on the homepage,
+                    additional event discounts.</p>
+            </aside>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <img src="#" alt="#">
+            <h3>Kolawole Chamber website</h3>
+            <p>6, University road oke baale osogbo</p>
+            <p>info@kolaeoleuthman7@gmail.com</p>
+            <p>+2347063921248</p>
+            <p>Location map</p>
+
+        </div>
+        <hr>
+        <p>&copy;<span id="year"></span> - Kolawole Uthman Abisola - Nigeria
+            wdd230 chamber website </p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const yearSpan = document.getElementById("year");
+            const currentYear = new Date().getFullYear();
+            yearSpan.textContent = currentYear;
+
+            const lastModifiedParagraph = document.getElementById("lastModified");
+            lastModifiedParagraph.textContent = "Last modified: " + document.lastModified;
+
+            const timestampInput = document.getElementById('timestamp');
+            const now = new Date();
+            timestampInput.value = now.toISOString();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/larger.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Chamber of Commerce</h1>
+    </header>
+    <nav>
+        <ul class="navigation">
+            <li><a href="#" title="Home">Home</a></li>
+            <li><a href="#" title="About" class="active">About</a></li>
+            <li><a href="#" title="News">News</a></li>
+            <li><a href="#" title="Form">Events</a></li>
+            <li><a href="$" title="Membership">Membership</a></li>
+            <li><a href="join.html" title="Membership">Join</a></li>
+            <li><a href="discover.html" title="Discover" class="active">Discover</a></li>
+            <li><a href="$" title="Contact Us">Contact Us</a></li>
+
+        </ul>
+    </nav>
+    <main>
+        <h2>Thank You for Your Application</h2>
+        <p>We appreciate your interest in joining the Chamber of Commerce. Your application has been received and is
+            being processed. We will contact you soon with further details.</p>
+    </main>
+    <footer>
+        <div>
+            <img src="#" alt="#">
+            <h3>Kolawole Chamber website</h3>
+            <p>6, University road oke baale osogbo</p>
+            <p>info@kolaeoleuthman7@gmail.com</p>
+            <p>+2347063921248</p>
+            <p>Location map</p>
+
+        </div>
+        <hr>
+        <p>&copy;<span id="year"></span> - Kolawole Uthman Abisola - Nigeria
+            wdd230 chamber website </p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const yearSpan = document.getElementById("year");
+            const currentYear = new Date().getFullYear();
+            yearSpan.textContent = currentYear;
+
+            const lastModifiedParagraph = document.getElementById("lastModified");
+            lastModifiedParagraph.textContent = "Last modified: " + document.lastModified;
+        });
+    </script>
+</body>
+
+</html>
