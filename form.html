@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Page</title>
     <link rel="stylesheet" href="style/form.css">
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/larger.css">
 </head>
 
 <body>
@@ -13,17 +15,11 @@
     <header>
         <h1>Header</h1>
     </header>
-    <nav>
-        <ul class="navigation">
-            <li><a href="#" title="Home">Home</a></li>
-            <li><a href="#" title="About" class="active">About</a></li>
-            <li><a href="#" title="News">News</a></li>
-            <li><a href="#" title="Form">Events</a></li>
-            <li><a href="$" title="Membership">Membership</a></li>
-            <li><a href="$" title="Membership">Advocacy</a></li>
-            <li><a href="$" title="Join">Join</a></li>
-            <li><a href="$" title="Contact Us">Contact Us</a></li>
-        </ul>
+    <nav class="navigation">
+        <a href="#" title="Home">Home</a>
+        <a href="#" title="Chamber" class="active">Chamber</a>
+        <a href="#" title="SitePlan">SitePlan</a>
+        <a href="#" title="Form">Form</a>
     </nav>
     <main>
         <form action="record.html" method="get">
@@ -47,8 +43,10 @@
         </form>
     </main>
     <footer>
-
+        <p>&copy;<span id="year"></span> - Kolawole Uthman Abisola - Nigeria</p>
+        <p id="lastModified"></p>
     </footer>
+
 </body>
 
 </html>
