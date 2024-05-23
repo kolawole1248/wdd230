@@ -52,28 +52,30 @@
         <div class="main-content">
             <h2>Local Attractions</h2>
             <div class="gallery">
+
                 <figure>
-                    <img data-src="images/attraction1.jpg" alt="Attraction 1" class="lazy" loading="lazy">
+                    <img src="images/attraction1.jpg" data-src="images/attraction1.jpg" alt="Attraction 1" class="lazy"
+                        loading="lazy">
                     <figcaption>Attraction 1</figcaption>
                 </figure>
                 <figure>
-                    <img data-src="images/ai.jpg" alt="Attraction 2" class="lazy">
+                    <img data-src="images/ai.jpg" alt="Attraction 2" class="lazy" loading="lazy">
                     <figcaption>Attraction 2</figcaption>
                 </figure>
                 <figure>
-                    <img data-src="images/attraction3.jpg" alt="Attraction 3" class="lazy">
+                    <img data-src="images/attraction3.jpg" alt="Attraction 3" class="lazy" loading="lazy">
                     <figcaption>Attraction 3</figcaption>
                 </figure>
                 <figure>
-                    <img data-src="images/attraction4.jpg" alt="Attraction 4" class="lazy">
+                    <img data-src="images/attraction4.jpg" alt="Attraction 4" class="lazy" loading="lazy">
                     <figcaption>Attraction 4</figcaption>
                 </figure>
                 <figure>
-                    <img data-src="images/attraction5.jpg" alt="Attraction 5" class="lazy">
+                    <img data-src="images/attraction5.jpg" alt="Attraction 5" class="lazy" loading="lazy">
                     <figcaption>Attraction 5</figcaption>
                 </figure>
                 <figure>
-                    <img data-src="images/attraction6.jpg" alt="Attraction 6" class="lazy">
+                    <img data-src="images/attraction6.jpg" alt="Attraction 6" class="lazy" loading="lazy">
                     <figcaption>Attraction 6</figcaption>
                 </figure>
             </div>
@@ -108,24 +110,28 @@
         });
 
         // Local Storage for Visit Message
-        const visitMessage = document.getElementById('visitMessage');
-        const lastVisit = localStorage.getItem('lastVisit');
-        const currentTime = Date.now();
-        const oneDay = 24 * 60 * 60 * 1000;
+        document.addEventListener("DOMContentLoaded", function () {
+            // The updated code for visit message
+            const visitMessage = document.getElementById('visitMessage');
+            const lastVisit = localStorage.getItem('lastVisit');
+            const currentTime = Date.now();
+            const oneDay = 24 * 60 * 60 * 1000;
 
-        if (lastVisit) {
-            const daysBetween = Math.floor((currentTime - lastVisit) / oneDay);
-            if (daysBetween < 1) {
-                visitMessage.textContent = 'Back so soon! Awesome!';
-            } else if (daysBetween === 1) {
-                visitMessage.textContent = 'You last visited 1 day ago.';
+            if (lastVisit) {
+                const daysBetween = Math.floor((currentTime - lastVisit) / oneDay);
+                if (daysBetween < 1) {
+                    visitMessage.textContent = 'Back so soon! Awesome!';
+                } else if (daysBetween === 1) {
+                    visitMessage.textContent = 'You last visited 1 day ago.';
+                } else {
+                    visitMessage.textContent = `You last visited ${daysBetween} days ago.`;
+                }
             } else {
-                visitMessage.textContent = `You last visited ${daysBetween} days ago.`;
+                visitMessage.textContent = 'Welcome! Let us know if you have any questions.';
             }
-        } else {
-            visitMessage.textContent = 'Welcome! Let us know if you have any questions.';
-        }
-        localStorage.setItem('lastVisit', currentTime);
+            localStorage.setItem('lastVisit', currentTime);
+        });
+
 
         // Lazy Loading Images
         document.addEventListener("DOMContentLoaded", function () {
