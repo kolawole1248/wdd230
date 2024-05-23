@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join Chamber of Commerce</title>
+    <meta name="description"
+        content="Join the Chamber of Commerce to access various membership benefits and grow your business network.">
+    <meta name="author" content="Kolawole Uthman Abisola">
     <link rel="stylesheet" href="style/base.css">
     <link rel="stylesheet" href="style/larger.css">
 </head>
@@ -19,12 +22,11 @@
             <li><a href="#" title="Home">Home</a></li>
             <li><a href="#" title="About" class="active">About</a></li>
             <li><a href="#" title="News">News</a></li>
-            <li><a href="#" title="Form">Events</a></li>
-            <li><a href="$" title="Membership">Membership</a></li>
-            <li><a href="join.html" title="Membership">Join</a></li>
+            <li><a href="#" title="Events">Events</a></li>
+            <li><a href="#" title="Membership">Membership</a></li>
+            <li><a href="join.html" title="Join">Join</a></li>
             <li><a href="discover.html" title="Discover" class="active">Discover</a></li>
-            <li><a href="$" title="Contact Us">Contact Us</a></li>
-
+            <li><a href="#" title="Contact Us">Contact Us</a></li>
         </ul>
     </nav>
     <main>
@@ -37,7 +39,7 @@
                 <input type="text" id="lastName" name="lastName" required><br>
 
                 <label for="title">Title/Position:</label>
-                <input type="text" id="title" name="title" pattern="[A-Za-z\s-]{7,}" required><br>
+                <input type="text" id="title" name="title" pattern="[A-Za-z\s\-\.]{7,}" required><br>
 
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="example@domain.com" required><br>
@@ -50,6 +52,7 @@
 
                 <label for="membershipLevel">Membership Level:</label>
                 <select id="membershipLevel" name="membershipLevel" required>
+                    <option value="" disabled selected>Select your membership level</option>
                     <option value="np">NP Membership</option>
                     <option value="bronze">Bronze Membership</option>
                     <option value="silver">Silver Membership</option>
@@ -75,29 +78,30 @@
     </main>
     <footer>
         <div>
-            <img src="#" alt="#">
+            <img src="#" alt="Kolawole Chamber website logo">
             <h3>Kolawole Chamber website</h3>
             <p>6, University road oke baale osogbo</p>
             <p>info@kolaeoleuthman7@gmail.com</p>
             <p>+2347063921248</p>
             <p>Location map</p>
-
         </div>
         <hr>
-        <p>&copy;<span id="year"></span> - Kolawole Uthman Abisola - Nigeria
-            wdd230 chamber website </p>
+        <p>&copy;<span id="year"></span> - Kolawole Uthman Abisola - Nigeria wdd230 chamber website </p>
         <p id="lastModified"></p>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
+            // Set the current year in the footer
             const yearSpan = document.getElementById("year");
             const currentYear = new Date().getFullYear();
             yearSpan.textContent = currentYear;
 
+            // Set the last modified date in the footer
             const lastModifiedParagraph = document.getElementById("lastModified");
             lastModifiedParagraph.textContent = "Last modified: " + document.lastModified;
 
+            // Set the timestamp value to the current date and time in ISO format
             const timestampInput = document.getElementById('timestamp');
             const now = new Date();
             timestampInput.value = now.toISOString();
