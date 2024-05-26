@@ -4,12 +4,8 @@
             "week": "Week 1",
             "links": [
                 {
-                    "url": "week01/holygrail.html",
-                    "title": "HG Layout"
-                },
-                {
-                    "url": "week01/media-query.html",
-                    "title": "mQueries"
+                    "url": "week01/index.html",
+                    "title": "Week 01 Activity"
                 }
             ]
         },
@@ -17,12 +13,8 @@
             "week": "Week 2",
             "links": [
                 {
-                    "url": "week02/flexbox.html",
-                    "title": "Flexbox"
-                },
-                {
-                    "url": "week02/grid.html",
-                    "title": "CSS Grid"
+                    "url": "week02/index.html",
+                    "title": "Week 02 Activity"
                 }
             ]
         },
@@ -30,8 +22,8 @@
             "week": "Week 3",
             "links": [
                 {
-                    "url": "week03/forms.html",
-                    "title": "Forms"
+                    "url": "week03/index.html",
+                    "title": "Week 03 Activity"
                 }
             ]
         },
@@ -39,8 +31,8 @@
             "week": "Week 4",
             "links": [
                 {
-                    "url": "week04/tables.html",
-                    "title": "Tables"
+                    "url": "week04/index.html",
+                    "title": "Week 04 Activity"
                 }
             ]
         },
@@ -48,8 +40,8 @@
             "week": "Week 5",
             "links": [
                 {
-                    "url": "week05/responsive.html",
-                    "title": "Responsive Design"
+                    "url": "week05/index.html",
+                    "title": "Week 05 Activity"
                 }
             ]
         }

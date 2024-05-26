@@ -10,8 +10,7 @@
     <meta name="description"
         content="WDD 230: Frontend Development by Kolawole Uthman Abisola - This page serves as the home page for Kolawole Uthman Abisola's WDD 230 course project.">
     <meta property="og:type" content="website">
-
-    <meta property="og:image" content="https://ibb.co/8NB4LTw">
+    <meta property="og:image" content="https://i.ibb.co/8NB4LTw/imagess.webp">
     <meta property="og:url" content="https://www.example.com/index.html">
     <link rel="stylesheet" href="style/normalize.css">
     <link rel="stylesheet" href="style/base.css">
@@ -20,13 +19,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-
 </head>
 
 <body>
-    <div id="mode">
-        🕶️
-    </div>
+    <div id="mode">🕶️</div>
     <header>
         <a id="logo_link" href="index.html"></a>
         <img class="img" src="images/imagess.webp" alt="My image" width="50" height="65">
@@ -57,7 +53,6 @@
                 <li><a href="https://codepen.io/kolawole1248/pen/mdYPOQw">week05</a></li>
                 <li><a href="#">week06</a></li>
             </ul>
-
         </section>
         <div class="weather-card">
             <h2>Current Weather</h2>
@@ -65,7 +60,6 @@
             <p id="description">Description: <span id="desc-value"></span></p>
             <img id="weather-icon" src="" alt="Weather Icon">
         </div>
-
         <section id="activity-links">
             <h2>Learning Activities</h2>
             <div id="links-container"></div>
@@ -79,143 +73,7 @@
         <p>&copy;<span id="year"></span> - Kolawole Uthman Abisola - Nigeria</p>
         <p id="lastModified"></p>
     </footer>
-
-
-
-    <script>
-        const yearSpan = document.getElementById("year");
-        const currentYear = new Date().getFullYear();
-        yearSpan.textContent = currentYear;
-
-
-        const lastModifiedParagraph = document.getElementById("lastModified");
-        lastModifiedParagraph.textContent = "Last modified: " + document.lastModified;
-
-
-
-        const hamButton = document.querySelector('#menu');
-        const navigation = document.querySelector('.navigation');
-
-        hamButton.addEventListener('click', () => {
-            navigation.classList.toggle('open');
-            hamButton.classList.toggle('open');
-        });
-        const modeButton = document.querySelector("#mode");
-        const main = document.querySelector("header");
-
-        modeButton.addEventListener("click", () => {
-            if (modeButton.textContent.includes("🕶️")) {
-                main.style.background = "#000";
-                main.style.color = "#fff";
-                modeButton.textContent = "🔆";
-            } else {
-                main.style.background = "#eee";
-                main.style.color = "#000";
-                modeButton.textContent = "🕶️";
-            }
-        });
-
-
-        const visitsDisplay = document.querySelector(".visits");
-
-
-        let numVisits = Number(window.localStorage.getItem("numVisits-ls")) || 0;
-
-
-        if (numVisits !== 0) {
-            visitsDisplay.textContent = numVisits;
-        } else {
-            visitsDisplay.textContent = `This is your first visit. 🥳 Welcome!`;
-        }
-
-
-        numVisits++;
-
-
-        localStorage.setItem("numVisits-ls", numVisits);
-
-
-
-        const baseURL = "https://kolawole1248.github.io/wdd230/";
-        const linksURL = `${baseURL}data/links.json`;
-
-        async function getLinks() {
-            try {
-                const response = await fetch(linksURL);
-                const data = await response.json();
-                displayLinks(data.weeks);
-            } catch (error) {
-                console.error('Error fetching links data:', error);
-            }
-        }
-
-        function displayLinks(weeks) {
-            const linksContainer = document.getElementById('links-container');
-            linksContainer.innerHTML = '';
-
-            weeks.forEach(week => {
-                const weekSection = document.createElement('section');
-                const weekHeader = document.createElement('h3');
-                weekHeader.textContent = week.week;
-                weekSection.appendChild(weekHeader);
-
-                const linkList = document.createElement('ul');
-
-                week.links.forEach(link => {
-                    const listItem = document.createElement('li');
-                    const anchor = document.createElement('a');
-                    anchor.href = baseURL + link.url;
-                    anchor.textContent = link.title;
-                    listItem.appendChild(anchor);
-                    linkList.appendChild(listItem);
-                });
-
-                weekSection.appendChild(linkList);
-                linksContainer.appendChild(weekSection);
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', getLinks);
-
-        const apiKey = '431f2861e18b991a98fe1f4b1c79402c';
-        const city = 'Osogbo';
-        const weatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
-
-        async function fetchWeather() {
-            try {
-                const response = await fetch(weatherURL);
-                const data = await response.json();
-
-                document.getElementById('temp-value').textContent = `${data.main.temp} °C`;
-                document.getElementById('desc-value').textContent = data.weather[0].description;
-                document.getElementById('weather-icon').src = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
-                document.getElementById('weather-icon').alt = data.weather[0].description;
-            } catch (error) {
-                console.error('Error fetching weather data:', error);
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', fetchWeather);
-
-
-
-
-
-
-
-
-
-
-    </script>
-
-
-
-
-
-
-
-
-
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>
