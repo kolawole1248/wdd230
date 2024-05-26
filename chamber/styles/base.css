@@ -476,3 +476,45 @@ footer {
     text-align: center;
     margin-top: 20px;
 }
+
+
+
+/* Styles for directory view toggle buttons */
+#directory-controls {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#directory-controls button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Styles for directory grid view */
+#directory.grid-view .member-card {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Styles for directory list view */
+#directory.list-view .member-card {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.member-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}

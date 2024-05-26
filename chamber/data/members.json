@@ -1,0 +1,67 @@
+{
+    "members": [
+        {
+            "name": "Company A",
+            "address": "123 Main St, Anytown, USA",
+            "phone": "555-1234",
+            "website": "https://companya.com",
+            "image": "companya.png",
+            "membershipLevel": "Gold",
+            "description": "A leading company in industry A."
+        },
+        {
+            "name": "Company B",
+            "address": "456 Oak Ave, Othertown, USA",
+            "phone": "555-5678",
+            "website": "https://companyb.com",
+            "image": "companyb.png",
+            "membershipLevel": "Silver",
+            "description": "A prominent company in industry B."
+        },
+        {
+            "name": "Company C",
+            "address": "789 Maple St, Smalltown, USA",
+            "phone": "555-9101",
+            "website": "https://companyc.com",
+            "image": "companyc.png",
+            "membershipLevel": "Bronze",
+            "description": "An innovative company in industry C."
+        },
+        {
+            "name": "Company D",
+            "address": "101 Pine Rd, Bigcity, USA",
+            "phone": "555-1123",
+            "website": "https://companyd.com",
+            "image": "companyd.png",
+            "membershipLevel": "Gold",
+            "description": "A well-established company in industry D."
+        },
+        {
+            "name": "Company E",
+            "address": "202 Cedar Blvd, Village, USA",
+            "phone": "555-1345",
+            "website": "https://companye.com",
+            "image": "companye.png",
+            "membershipLevel": "Silver",
+            "description": "A renowned company in industry E."
+        },
+        {
+            "name": "Company F",
+            "address": "303 Birch Ln, Metropolis, USA",
+            "phone": "555-1678",
+            "website": "https://companyf.com",
+            "image": "companyf.png",
+            "membershipLevel": "NP",
+            "description": "A non-profit organization dedicated to industry F."
+        },
+        {
+            "name": "Company G",
+            "address": "404 Elm St, Smallville, USA",
+            "phone": "555-1902",
+            "website": "https://companyg.com",
+            "image": "companyg.png",
+            "membershipLevel": "Bronze",
+            "description": "A growing company in industry G."
+        }
+    ]
+}

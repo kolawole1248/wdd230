@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Commerce Directory</title>
+    <meta name="author" content="Kolawole Uthman Abisola">
+    <meta property="og:title" content="Kolawole Uthman Abisola - WDD 230 - Chamber of Commerce Directory">
+    <meta name="description"
+        content="WDD 230: Frontend Development by Kolawole Uthman Abisola - This page serves as the directory page for Kolawole Uthman Abisola's WDD 230 course project.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://ibb.co/8NB4LTw">
+    <meta property="og:url" content="https://kolawole1248.github.io/wdd230/">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+
+<body>
+    <header>
+        <img class="omg" src="images/chamberlogo.png" alt="chamberlogo">
+        <h1>Chamber of Commerce</h1>
+        <div class="social">
+            <img class="social" src="images/xlogo.png" alt="xlogo">
+            <img class="social" src="images/fb.jpg" alt="facebook logo">
+            <img class="social" src="images/iglogo.jpg" alt="instagram logo">
+            <img class="social" src="images/linkdenlogo.jpg" alt="linkdenlogo">
+        </div>
+    </header>
+    <button id="menu"></button>
+    <nav>
+        <ul class="navigation">
+            <li><a href="#" title="Home">Home</a></li>
+            <li><a href="#" title="About" class="active">About</a></li>
+            <li><a href="#" title="News">News</a></li>
+            <li><a href="#" title="Form">Events</a></li>
+            <li><a href="$" title="Membership">Membership</a></li>
+            <li><a href="join.html" title="Membership">Join</a></li>
+            <li><a href="discover.html" title="Discover" class="active">Discover</a></li>
+            <li><a href="$" title="Contact Us">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section id="directory-controls">
+        <button id="grid-view">Grid View</button>
+        <button id="list-view">List View</button>
+    </section>
+
+    <section id="directory" class="grid-view">
+        <!-- Member directory will be dynamically populated here -->
+    </section>
+
+    <footer>
+        <div>
+            <img src="#" alt="#">
+            <h3>Kolawole Chamber website</h3>
+            <p>6, University road oke baale osogbo</p>
+            <p>info@kolaeoleuthman7@gmail.com</p>
+            <p>+2347063921248</p>
+            <p>Location map</p>
+        </div>
+        <hr>
+        <p>&copy;<span id="year"></span> - Kolawole Uthman Abisola - Nigeria wdd230 chamber website</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script>
+        const yearSpan = document.getElementById("year");
+        const currentYear = new Date().getFullYear();
+        yearSpan.textContent = currentYear;
+
+        const lastModifiedParagraph = document.getElementById("lastModified");
+        lastModifiedParagraph.textContent = "Last modified: " + document.lastModified;
+
+        const hamButton = document.querySelector('#menu');
+        const navigation = document.querySelector('.navigation');
+
+        hamButton.addEventListener('click', () => {
+            navigation.classList.toggle('open');
+            hamButton.classList.toggle('open');
+        });
+
+        // JavaScript for fetching and displaying member data
+        document.addEventListener('DOMContentLoaded', () => {
+            const directory = document.getElementById('directory');
+            const gridViewButton = document.getElementById('grid-view');
+            const listViewButton = document.getElementById('list-view');
+
+            async function fetchMembers() {
+                const response = await fetch('data/members.json');
+                const data = await response.json();
+                displayMembers(data.members);
+            }
+
+            function displayMembers(members) {
+                directory.innerHTML = members.map(member => `
+                    <div class="member-card">
+                        <img src="images/${member.image}" alt="${member.name}">
+                        <h3>${member.name}</h3>
+                        <p>${member.address}</p>
+                        <p>${member.phone}</p>
+                        <a href="${member.website}" target="_blank">${member.website}</a>
+                        <p>${member.membershipLevel}</p>
+                        <p>${member.description}</p>
+                    </div>
+                `).join('');
+            }
+
+            gridViewButton.addEventListener('click', () => {
+                directory.classList.remove('list-view');
+                directory.classList.add('grid-view');
+            });
+
+            listViewButton.addEventListener('click', () => {
+                directory.classList.remove('grid-view');
+                directory.classList.add('list-view');
+            });
+
+            fetchMembers();
+        });
+    </script>
+
+</body>
+
+</html>
