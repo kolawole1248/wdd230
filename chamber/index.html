@@ -4,13 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Chamber of Commerce</title>
+    <title>Chamber of Commerce</title>
     <meta name="author" content="Kolawole Uthman Abisola">
-    <meta property="og:title" content="Kolawole Uthman Abisola - WDD 230 - Chamber of Commerce ">
+    <meta property="og:title" content="Kolawole Uthman Abisola - WDD 230 - Chamber of Commerce">
     <meta name="description"
         content="WDD 230: Frontend Development by Kolawole Uthman Abisola - This page serves as the home page for Kolawole Uthman Abisola's WDD 230 course project.">
     <meta property="og:type" content="website">
-
     <meta property="og:image" content="https://ibb.co/8NB4LTw">
     <meta property="og:url" content="https://www.example.com/index.html">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -21,46 +20,44 @@
 
 <body>
     <header>
-        <img class="omg" src="images/chamberlogo.png" alt="chamberlogo">
+        <img class="omg" src="images/chamberlogo.png" alt="Chamber Logo">
         <h1>Chamber of Commerce</h1>
         <div class="social">
-            <img class="social" src="images/xlogo.png" alt="xlogo">
-            <img class="social" src="images/fb.jpg" alt="facebook logo">
-            <img class="social" src="images/iglogo.jpg" alt="instagram logo">
-            <img class="social" src="images/linkdenlogo.jpg" alt="linkdenlogo">
+            <img class="social" src="images/xlogo.png" alt="X Logo">
+            <img class="social" src="images/fb.jpg" alt="Facebook Logo">
+            <img class="social" src="images/iglogo.jpg" alt="Instagram Logo">
+            <img class="social" src="images/linkdenlogo.jpg" alt="LinkedIn Logo">
         </div>
     </header>
     <button id="menu"></button>
     <nav>
         <ul class="navigation">
-            <li><a href="#" title="Home">Home</a></li>
+            <li><a href="index.html" title="Home">Home</a></li>
             <li><a href="#" title="About" class="active">About</a></li>
             <li><a href="#" title="News">News</a></li>
             <li><a href="#" title="Form">Events</a></li>
-            <li><a href="$" title="Membership">Membership</a></li>
-            <li><a href="join.html" title="Membership">Join</a></li>
+            <li><a href="directory.html" title="directory">Directory</a></li>
+            <li><a href="join.html" title="Join">Join</a></li>
             <li><a href="discover.html" title="Discover" class="active">Discover</a></li>
             <li><a href="$" title="Contact Us">Contact Us</a></li>
-
         </ul>
     </nav>
+
     <section id="hero">
         <div class="hero-content">
             <picture>
                 <source srcset="images/small.webp" media="(max-width: 500px)">
                 <source srcset="images/medium.webp" media="(max-width: 1000px)">
                 <img src="images/large.webp" alt="table setting" width="1500" height="750">
-
             </picture>
-            <button class="cta-btn">Click Me</button>
+
         </div>
 
     </section>
 
     <section id="cta">
-        <!-- Call to action link goes here -->
+        <button class="cta-btn">Click Me</button>
     </section>
-
 
     <section id="events">
         <h2>Live Chamber Event</h2>
@@ -78,40 +75,34 @@
         <h2>Weather Update</h2>
         <div class="weather-card">
             <div class="weather-header">
-                <h3>City Name</h3>
-                <p>May 16, 2024</p>
+                <h3 id="city-name">City Name</h3>
+                <p id="current-date"></p>
             </div>
             <div class="weather-info">
-                <img src="images/sunny.png" alt="weather icon" class="weather-icon">
+                <img id="weather-icon" src="" alt="weather icon" class="weather-icon">
                 <div class="weather-details">
-                    <p>Temperature: 25°C</p>
-                    <p>Condition: Sunny</p>
+                    <p id="temperature">Temperature: </p>
+                    <p id="weather-condition">Condition: </p>
                 </div>
+            </div>
+            <div id="forecast">
+                <!-- Three day forecast will be dynamically added here -->
             </div>
         </div>
     </section>
 
     <section id="spotlights">
         <h2>Company Spotlights</h2>
-        <div class="spotlight">
-            <img src="images/company1.jpg" alt="Company 1" class="spotlight-img">
-            <h3>Company Name 1</h3>
-            <p>Company 1 is a leader in the tech industry, providing innovative solutions to customers worldwide.</p>
-            <a href="https://www.company1.com" target="_blank">Learn More</a>
-        </div>
-        <div class="spotlight">
-            <img src="images/company2.jpg" alt="Company 2" class="spotlight-img">
-            <h3>Company Name 2</h3>
-            <p>Company 2 specializes in sustainable products and services, making the world a greener place.</p>
-            <a href="https://www.company2.com" target="_blank">Learn More</a>
-        </div>
-        <div class="spotlight">
-            <img src="images/company3.jpg" alt="Company 3" class="spotlight-img">
-            <h3>Company Name 3</h3>
-            <p>Company 3 offers top-notch financial services to help you manage and grow your wealth.</p>
-            <a href="https://www.company3.com" target="_blank">Learn More</a>
+        <div class="spotlight-container">
+            <!-- Spotlight ads will be dynamically added here -->
         </div>
     </section>
+
+    <div id="banner" class="banner">
+        <p>Join us for the Chamber of Commerce meet and greet on Wednesday at 7:00 p.m.</p>
+        <button id="close-banner">❌</button>
+    </div>
+
     <footer>
         <div>
             <img src="#" alt="#">
@@ -120,33 +111,128 @@
             <p>info@kolaeoleuthman7@gmail.com</p>
             <p>+2347063921248</p>
             <p>Location map</p>
-
         </div>
         <hr>
-        <p>&copy;<span id="year"></span> - Kolawole Uthman Abisola - Nigeria
-            wdd230 chamber website </p>
+        <p>&copy;<span id="year"></span> - Kolawole Uthman Abisola - Nigeria wdd230 chamber website </p>
         <p id="lastModified"></p>
     </footer>
 
-    <script>
-        const yearSpan = document.getElementById("year");
-        const currentYear = new Date().getFullYear();
-        yearSpan.textContent = currentYear;
-
-
-        const lastModifiedParagraph = document.getElementById("lastModified");
-        lastModifiedParagraph.textContent = "Last modified: " + document.lastModified;
-
-
-        const hamButton = document.querySelector('#menu');
-        const navigation = document.querySelector('.navigation');
-
-        hamButton.addEventListener('click', () => {
-            navigation.classList.toggle('open');
-            hamButton.classList.toggle('open');
+    <script>document.addEventListener('DOMContentLoaded', () => {
+            updateYear();
+            updateLastModified();
+            handleMenuToggle();
+            displayWeather();
+            displaySpotlights();
+            displayBanner();
         });
-    </script>
 
+        // Update year in footer
+        function updateYear() {
+            const yearSpan = document.getElementById("year");
+            const currentYear = new Date().getFullYear();
+            yearSpan.textContent = currentYear;
+        }
+
+        // Update last modified date in footer
+        function updateLastModified() {
+            const lastModifiedParagraph = document.getElementById("lastModified");
+            lastModifiedParagraph.textContent = "Last modified: " + document.lastModified;
+        }
+
+        // Toggle navigation menu
+        function handleMenuToggle() {
+            const hamButton = document.querySelector('#menu');
+            const navigation = document.querySelector('.navigation');
+
+            hamButton.addEventListener('click', () => {
+                navigation.classList.toggle('open');
+                hamButton.classList.toggle('open');
+            });
+        }
+
+        // Display weather information
+        async function displayWeather() {
+            const apiKey = '431f2861e18b991a98fe1f4b1c79402c';
+            const city = 'Osogbo';
+            const weatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+            const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`;
+
+            try {
+                const weatherResponse = await fetch(weatherURL);
+                const weatherData = await weatherResponse.json();
+                const forecastResponse = await fetch(forecastURL);
+                const forecastData = await forecastResponse.json();
+
+                // Current weather
+                document.getElementById('city-name').textContent = weatherData.name;
+                document.getElementById('current-date').textContent = new Date().toLocaleDateString();
+                document.getElementById('temperature').textContent = `Temperature: ${weatherData.main.temp}°C`;
+                document.getElementById('weather-condition').textContent = `Condition: ${weatherData.weather[0].description}`;
+                document.getElementById('weather-icon').src = `http://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`;
+                document.getElementById('weather-icon').alt = weatherData.weather[0].description;
+
+                // 3-day forecast
+                const forecastContainer = document.getElementById('forecast');
+                const forecastDays = forecastData.list.filter((_, index) => index % 8 === 0).slice(0, 3);
+                forecastDays.forEach(day => {
+                    const forecastElement = document.createElement('div');
+                    forecastElement.className = 'forecast-day';
+                    forecastElement.innerHTML = `
+                    <p>${new Date(day.dt_txt).toLocaleDateString()}</p>
+                    <p>Temperature: ${day.main.temp}°C</p>
+                    <p>Condition: ${day.weather[0].description}</p>
+                    <img src="http://openweathermap.org/img/wn/${day.weather[0].icon}.png" alt="${day.weather[0].description}">
+                `;
+                    forecastContainer.appendChild(forecastElement);
+                });
+
+            } catch (error) {
+                console.error('Error fetching weather data:', error);
+            }
+        }
+
+        // Display spotlight ads
+        function displaySpotlights() {
+            const members = [
+                { name: "Company Name 1", description: "Company 1 is a leader in the tech industry.", url: "https://www.company1.com", image: "images/company1.jpg", level: "gold" },
+                { name: "Company Name 2", description: "Company 2 specializes in sustainable products.", url: "https://www.company2.com", image: "images/company2.jpg", level: "silver" },
+                { name: "Company Name 3", description: "Company 3 offers top-notch financial services.", url: "https://www.company3.com", image: "images/company3.jpg", level: "bronze" },
+                { name: "Company Name 4", description: "Company 4 provides excellent healthcare services.", url: "https://www.company4.com", image: "images/company4.jpg", level: "gold" },
+                { name: "Company Name 5", description: "Company 5 delivers fast and reliable logistics.", url: "https://www.company5.com", image: "images/company5.jpg", level: "silver" }
+            ];
+
+            const qualifiedMembers = members.filter(member => member.level === 'gold' || member.level === 'silver');
+            const spotlights = qualifiedMembers.sort(() => 0.5 - Math.random()).slice(0, 3);
+
+            const spotlightContainer = document.querySelector('.spotlight-container');
+            spotlightContainer.innerHTML = '';
+            spotlights.forEach(member => {
+                const spotlightElement = document.createElement('div');
+                spotlightElement.className = 'spotlight';
+                spotlightElement.innerHTML = `
+                <img src="${member.image}" alt="${member.name}" class="spotlight-img">
+                <h3>${member.name}</h3>
+                <p>${member.description}</p>
+                <a href="${member.url}" target="_blank">Learn More</a>
+            `;
+                spotlightContainer.appendChild(spotlightElement);
+            });
+        }
+
+        // Display banner
+        function displayBanner() {
+            const banner = document.getElementById('banner');
+            const closeBannerButton = document.getElementById('close-banner');
+            const today = new Date().getDay();
+            if (today >= 1 && today <= 3) {
+                banner.style.display = 'block';
+            }
+
+            closeBannerButton.addEventListener('click', () => {
+                banner.style.display = 'none';
+            });
+        }
+    </script>
 </body>
 
 </html>

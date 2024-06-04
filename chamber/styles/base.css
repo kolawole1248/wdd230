@@ -291,8 +291,8 @@ nav {
 }
 
 /* Style for the hero content */
-.hero-content {
-    position: absolute;
+#cta {
+    position: relative;
     left: 50%;
     bottom: 50px;
     transform: translateX(-50%);
