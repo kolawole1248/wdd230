@@ -56,8 +56,9 @@
     </section>
 
     <section id="cta">
-        <button class="cta-btn">Click Me</button>
+        <button id="cta-btn" class="cta-btn">Click Me</button>
     </section>
+
 
     <section id="events">
         <h2>Live Chamber Event</h2>
@@ -117,7 +118,9 @@
         <p id="lastModified"></p>
     </footer>
 
-    <script>document.addEventListener('DOMContentLoaded', () => {
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
             updateYear();
             updateLastModified();
             handleMenuToggle();
@@ -232,6 +235,15 @@
                 banner.style.display = 'none';
             });
         }
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const ctaButton = document.querySelector('.cta-btn');
+            ctaButton.addEventListener('click', () => {
+                window.location.href = 'join.html';
+            });
+        });
+
     </script>
 </body>
 
